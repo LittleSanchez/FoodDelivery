@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp"
+    tools:context=".ChangeImageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.oginotihiro.cropview.CropView
+            android:id="@+id/cropView"
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:background="@drawable/back"
+            android:layout_marginBottom="30px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cropView"
+            android:onClick="RotateLeftImage"
+            android:id="@+id/layout"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:onClick="RotateRightImage"
+                android:layout_marginBottom="100px"
+                android:src="@drawable/ic_rotate_left" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="100px"
+                android:layout_weight="1"
+                android:src="@drawable/ic_rotate_right" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout"
+            android:layout_centerHorizontal="true"
+            android:onClick="ChangeImage"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,5 @@
+dotnet tool install --global dotnet-ef
+dotnet restore
+dotnet tool restore
+dotnet ef migrations add "Add asp.net tables" -c DataContext -p ../Food.EFData/Food.EFData.csproj -s Food.WebApi.csproj
+dotnet ef database update -c DataContext -p ../Food.EFData/Food.EFData.csproj -s Food.WebApi.csproj
